@@ -19,7 +19,7 @@ public class BankAccount {
         WORKPLACE
     }
 
-    private int accountNumber;
+    private static int accountNumber;
     public BankAccountType accountType;
     private double accountBalance;
     private String ownerName;
@@ -27,9 +27,31 @@ public class BankAccount {
     private double interestEarned;
 
     public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+        accountNumber = 0;
+        ownerName = name;
+        accountType = accountCategory;
+        accountbalance = 0;
+        interestRate = 0;
+        interestEarned = 0;
+
+    }
+    public double getBalance() {
+        return accountBalance;
+    }
+    public void setBalance(final double newBalance) {
+        accountBalance = newBalance;
+    }
+    public String getOwnerName() {
+        return ownerName;
+    }
+    public void setOwnerName(final String n) {
+        ownerName = n;
+    }
+    public static int getAccountNumber() {
+        return accountNumber;
+    }
+    public double getInterestEarned() {
+        return interestEarned;
     }
 
     /*
